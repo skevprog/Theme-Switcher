@@ -1,0 +1,84 @@
+:root {
+    --light: #ffffff;
+    --bg: #FCFCFC;
+    --bg-panel: #EBEBEB;
+    --color-text: #333333;
+}
+
+html[data-theme= 'dark'] {
+    --bg: #292C35;
+    --bg-panel: #434350;
+    --color-text: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    transition: background .3s linear, color .3s linear;
+    color: var(--color-text);
+    background: var(--bg);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
+    background: var(--bg-panel);
+    border-radius: 30px;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background-color: #111;
+    border-radius: 50px;
+    display: flex;
+    height: 26px;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    width: 50px;
+    transform: scale(1.2);
+    transform-origin: top;
+}
+
+.label .ball {
+    background-color: var(--light);
+    border-radius: 50%;
+    height: 22px;
+    left: 2px;
+    width: 22px;
+    position: absolute;
+    top: 2px;
+    transform: translateX(0px);
+    transition: transform .2s linear;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(24px);
+}
+
+.quote {
+    margin: 0;
+    padding: 1em 4em;
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
