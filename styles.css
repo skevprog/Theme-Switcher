@@ -52,6 +52,7 @@ body {
     width: 50px;
     transform: scale(1.2);
     transform-origin: top;
+    cursor: pointer;
 }
 
 .label .ball {
